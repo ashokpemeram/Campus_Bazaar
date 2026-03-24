@@ -40,7 +40,7 @@ const SoldProducts = () => {
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                 <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
                                     <div style={{ width: '80px', height: '80px', borderRadius: '12px', background: 'rgba(0,0,0,0.2)', overflow: 'hidden' }}>
-                                        {sale.products[0]?.productId?.images?.[0] ? <img src={`/uploads/${sale.products[0].productId.images[0]}`} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : null}
+                                        {sale.products[0]?.productId?.images?.[0] ? <img src={`${import.meta.env.VITE_SERVER_URL}/uploads/${sale.products[0].productId.images[0]}`} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : null}
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.2rem', marginBottom: '8px' }}>{sale.products[0]?.productId?.title || 'Product Deleted'}</h4>

@@ -67,7 +67,7 @@ const MyListings = () => {
                             <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
                                 <div style={{ width: '60px', height: '60px', borderRadius: '10px', background: 'rgba(0,0,0,0.2)', overflow: 'hidden' }}>
                                     {product.images?.[0] ? 
-                                        <img src={`/uploads/${product.images[0]}`} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : 
+                                        <img src={`${import.meta.env.VITE_SERVER_URL}/uploads/${product.images[0]}`} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : 
                                         <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-dim)', fontSize: '0.7rem' }}>N/A</div>
                                     }
                                 </div>

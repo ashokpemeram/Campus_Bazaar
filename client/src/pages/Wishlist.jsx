@@ -77,7 +77,7 @@ const Wishlist = () => {
                         {wishlist.filter(p => p && p._id).map(product => (
                             <div key={product._id} className="card animate-fade" style={{ display: 'flex', flexDirection: 'column' }}>
                                 <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
-                                    <img src={`/uploads/${product.images?.[0]}`} alt={product.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img src={`${import.meta.env.VITE_SERVER_URL}/uploads/${product.images?.[0]}`} alt={product.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     <button 
                                         onClick={() => removeFromWishlist(product._id)}
                                         style={{ position: 'absolute', top: '10px', right: '10px', background: 'rgba(239, 68, 68, 0.8)', color: 'white', padding: '8px', borderRadius: '50%', border: 'none', cursor: 'pointer' }}

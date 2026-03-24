@@ -131,7 +131,7 @@ const SellerOrders = () => {
                                     {order.products.map((item, idx) => (
                                         <div key={idx} style={{ display: 'flex', gap: '15px', marginBottom: '10px' }}>
                                             <div style={{ width: '50px', height: '50px', borderRadius: '8px', background: 'rgba(0,0,0,0.2)', overflow: 'hidden' }}>
-                                                {item.productId?.images?.[0] ? <img src={`/uploads/${item.productId.images[0]}`} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : null}
+                                                {item.productId?.images?.[0] ? <img src={`${import.meta.env.VITE_SERVER_URL}/uploads/${item.productId.images[0]}`} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : null}
                                             </div>
                                             <div>
                                                 <div style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>{item.productId?.title || 'Product Deleted'}</div>

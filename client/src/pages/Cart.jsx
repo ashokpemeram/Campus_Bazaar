@@ -94,7 +94,7 @@ const Cart = () => {
                             {cart.items.map(item => (
                                 <div key={item.productId?._id} className="card animate-fade" style={{ display: 'flex', padding: '20px', gap: '25px', position: 'relative' }}>
                                     <div style={{ width: '120px', height: '120px', borderRadius: '12px', overflow: 'hidden', flexShrink: 0 }}>
-                                        <img src={`/uploads/${item.productId?.images?.[0]}`} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                        <img src={`${import.meta.env.VITE_SERVER_URL}/uploads/${item.productId?.images?.[0]}`} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     </div>
                                     <div style={{ flex: 1 }}>
                                         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>

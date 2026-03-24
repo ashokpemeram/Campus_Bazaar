@@ -9,7 +9,7 @@ const Settings = () => {
     const collegeName = user?.collegeName || user?.college || '';
     const [password, setPassword] = useState('');
     const [avatar, setAvatar] = useState(null);
-    const [preview, setPreview] = useState(user?.avatar ? `/uploads/${user.avatar}` : null);
+    const [preview, setPreview] = useState(user?.avatar ? `${import.meta.env.VITE_SERVER_URL}/uploads/${user.avatar}` : null);
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState({ type: '', text: '' });
 
